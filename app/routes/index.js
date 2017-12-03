@@ -1,5 +1,9 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  titleToken: 'Home'
+  titleToken: 'Home',
+
+  model() {
+    return this.get('store').findAll('message');
+  }
 });
